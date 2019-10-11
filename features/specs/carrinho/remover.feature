@@ -15,7 +15,7 @@ Funcionalidade: Remover do carrinho
 
     Esquema do Cenário: Remover item
         Quando eu removo somente o item <item>
-        Então o valor total deve ser de <total>
+        Então  o valor total deve ser de <total>
 
         Exemplos:
         | item  | total      |
