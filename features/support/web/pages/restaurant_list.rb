@@ -1,3 +1,4 @@
+
 class RestaurantListPage
   include Capybara::DSL
 
@@ -5,15 +6,11 @@ class RestaurantListPage
     visit "/restaurants"
   end
 
+  def go(restaurant)
+    find(".restaurant-item", text: restaurant.upcase).click
+  end
+
   def list
     all(".restaurant-item")
-  end
-
-  def go(restaurant)
-    find(".restaurant-item", text: restaurante.upcase).click
-  end
-
-  def add_to_cart(name)
-    find('.menu-item-info-box', text: name.upcase).find('.add-to-cart').click
   end
 end

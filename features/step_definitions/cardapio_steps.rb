@@ -3,7 +3,7 @@ Dado("que acesso a lista de restaurantes") do
 end
 
 Quando("eu escolho o restaurante {string}") do |restaurante|
-  @rest_list_page.go
+  @rest_list_page.go(restaurante)
 end
 
 Então("vejo os seguintes itens disponíveis no cardápio:") do |table|
@@ -20,8 +20,8 @@ end
 
 Então("eu vejo as seguintes informacoes adicionais:") do |table|
   infos = table.rows_hash
-  detail = @rest_page.details
-  expect(detail).to have_text infos["categoria"]
-  expect(detail).to have_text infos["descricao"]
-  expect(detail).to have_text infos["horarios"]
+  defail = @rest_page.details
+  expect(defail).to have_text infos["categoria"]
+  expect(defail).to have_text infos["descricao"]
+  expect(defail).to have_text infos["horarios"]
 end
