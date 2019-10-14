@@ -5,11 +5,14 @@ Funcionalidade: Cardápio
     Sendo um usuário que escolheu um restaurante
     Posso acesser o cardápio
 
+    Contexto: Restaurantes
+        Dado que acesso a lista de restaurantes
+
     @cardapio
     Cenario: Produto disponível
 
         Quando eu escolho o restaurante "Burger House"
-        Então vejo os seguintes items disponíveis no cardápio:
+        Então vejo os seguintes itens disponíveis no cardápio:
             | produto        | descricao                       | preco    |
             | Classic Burger | O clássico. Não tem como errar. | R$ 18,50 |
             | Batatas Fritas | Batatas fritas crocantes        | R$ 5,50  |     
